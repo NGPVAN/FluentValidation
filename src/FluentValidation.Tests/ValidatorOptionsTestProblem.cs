@@ -34,8 +34,8 @@ namespace FluentValidation.Tests
         [Test]
         public void ShouldHaveValidationErrorFor_fails_if_PropertyNameResolver_set_before_rule()
         {
-            ValidatorOptions.PropertyNameResolver = (type, member, expr) => "99 problems";
             var validator = new TestValidator();
+            ValidatorOptions.PropertyNameResolver = (type, member, expr) => "99 problems";
             validator.RuleFor(x => x.Forename).NotNull();
             // If this was all working correctly, this test should fail
             typeof(ValidationTestException).ShouldBeThrownBy(() => validator.ShouldHaveValidationErrorFor(x => x.Forename, (string)null));

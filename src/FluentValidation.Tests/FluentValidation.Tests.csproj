@@ -155,6 +155,7 @@
     <Compile Include="ValidateAndThrowTester.cs" />
     <Compile Include="ValidationResultTests.cs" />
     <Compile Include="ValidatorDescriptorTester.cs" />
+    <Compile Include="ValidatorOptionsTestProblem.cs" />
     <Compile Include="ValidatorSelectorTests.cs" />
     <Compile Include="ValidatorTesterTester.cs" />
   </ItemGroup>
